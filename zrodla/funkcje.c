@@ -1,11 +1,6 @@
-#include "wlasne_typy_danych.c"
+#include "funkcje.h"
 
-/**
- * @brief Funkcja wyznacza rozmiar tablicy znaków z tekstem.
- * 
- * @param txt - tekst, którego rozmiar ma zostać wyznaczony
- * @return rozmiar tablicy znaków, jako typ int
- */
+
 int wyznaczRozmTekstu(char *txt)
 {
     int wynik = 0;
@@ -15,11 +10,6 @@ int wyznaczRozmTekstu(char *txt)
     return wynik;
 }
 
-/**
- * @brief Funkcja wypisująca pojedyncze wyrazy z pliku tekstowego.
- * 
- * @param plik_we - zmienna plikowa pliku wejściowego
- */
 void wypiszWyrazyZPliku(FILE *plik_we)
 {
     char wyraz[100];    
@@ -31,14 +21,7 @@ void wypiszWyrazyZPliku(FILE *plik_we)
     }
 }
 
-/**
- * @brief Sprawdza w jakim stopniu jeden wyraz pokrywa się z drugim.
- * 
- * @param wyraz_1 - wyraz sprawdzany
- * @param wyraz_2 - wyraz odniesienia
- * @return enum zgodnosc 
- */
-enum zgodnosc sprZgodnoscWyrazow(char *wyraz_1, char *wyraz_2)
+zgodnosc sprZgodnoscWyrazow(char *wyraz_1, char *wyraz_2)
 {
     // wartości rozmiarów łańcuchów znaków
     int rozm_1 = wyznaczRozmTekstu(wyraz_1);
@@ -89,13 +72,7 @@ enum zgodnosc sprZgodnoscWyrazow(char *wyraz_1, char *wyraz_2)
     }
 }
 
-/**
- * @brief Funkcja zamieniająca typ wyliczeniowy zgodnosc na napis.
- * 
- * @param arg - wartość zgodności
- * @return char* odpowiedni łańcuch znaków, będący informacją o zgodności
- */
-char *dekodujZgodnosc(enum zgodnosc arg)
+char *dekodujZgodnosc(zgodnosc arg)
 {
     switch(arg)
     {

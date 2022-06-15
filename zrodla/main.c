@@ -1,4 +1,4 @@
-#include "funkcje.c"
+#include "funkcje.h"
 
 int maxBuffLngth = 50;
 
@@ -32,12 +32,13 @@ int main(void)
     //     printf("\n---%s---\n", wyraz);        
     // }
 
-    char wyraz_1[] = "motorower";
-    char wyraz_2[] = "rower";
+    char wyraz_1[] = "wodolot";
+    char wyraz_2[] = "wodorower";
 
-    enum zgodnosc wynikSpr = sprZgodnoscWyrazow(wyraz_1, wyraz_2);
+    zgodnosc wynikSpr = sprZgodnoscWyrazow(wyraz_1, wyraz_2);
     printf("Podane wyrazy to (odpowiednio 1-szy i 2-gi): %s i %s", wyraz_1, wyraz_2);
     printf("\nWynik testu zgodnosci: %s", dekodujZgodnosc(wynikSpr));
+
 
     // fclose(plikWej);
 
