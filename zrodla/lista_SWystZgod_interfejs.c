@@ -162,6 +162,19 @@ SWystapienieZgodnosci *zwrocElemWgParamKon(SWystapienieZgodnosci *ogon, int nr_l
     
 }
 
+SWystapienieZgodnosci *znajdzGlowe(SWystapienieZgodnosci *ogon)
+{
+    SWystapienieZgodnosci *wyn = NULL;
+    wyn = ogon;
+
+    while (wyn != NULL && wyn->poprz != NULL)
+    {
+        wyn = wyn->poprz;
+    }
+    
+    return wyn;
+}
+
 void wyczyscListePocz(SWystapienieZgodnosci *glowa)
 {
     SWystapienieZgodnosci *temp;

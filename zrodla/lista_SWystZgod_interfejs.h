@@ -96,6 +96,14 @@ SWystapienieZgodnosci *zwrocElemWgParamPocz(SWystapienieZgodnosci *glowa, int nr
 SWystapienieZgodnosci *zwrocElemWgParamKon(SWystapienieZgodnosci *ogon, int nr_linii, zgodnosc param_zgod);
 
 /**
+ * @brief Znajduje głowę listy dwukierunkowej SWystapienieZgodnosci.
+ * 
+ * @param ogon - wskaźnik ostatniego elementu listy
+ * @return SWystapienieZgodnosci* wskaźnik pierwszego elementu listy
+ */
+SWystapienieZgodnosci *znajdzGlowe(SWystapienieZgodnosci *ogon);
+
+/**
  * @brief Zwalnia pamięć zaalokowaną dla elementów listy.
  * 
  * @param glowa - wskaźnik pierwszego elementu listy

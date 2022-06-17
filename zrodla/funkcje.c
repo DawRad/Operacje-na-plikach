@@ -99,10 +99,10 @@ SWystapienieZgodnosci *analizujWyrazyZPliku(FILE *plik, char *wyraz_odn, char mo
         if(!isspace(c) && !ispunct(c) && !spr_rozm)
         {
             //
-            bufor[++idx] = c;
+            bufor[idx++] = c;
             
             // jeśli znak jest już na drugim miejscu od końca bufora
-            if(idx == 997) spr_rozm = true; 
+            if(idx == 998) spr_rozm = true; 
         }
         else
         {
@@ -120,14 +120,15 @@ SWystapienieZgodnosci *analizujWyrazyZPliku(FILE *plik, char *wyraz_odn, char mo
             // jeszcze znakiem alfanumerycznym
             if(spr_rozm && !isspace(c) && !ispunct(c))
             {
-                bufor[++idx] = c;   // pozycja 998 w buforze                
+                bufor[idx++] = c;   // pozycja 998 w buforze                
             }            
 
             // zakończenie łańcucha znaków
-            bufor[++idx] = 0;   // indeks powinien mieć numer 999
+            bufor[idx] = 0;   // indeks powinien mieć numer 999
+            idx = 0;
 
             // wielkość liter w porównywanych wyrazach nie ma znaczenia
-            if(mode == 0)
+            if(mode == '0')
             {   
                 toLower(bufor);
                 zgodnosc spr_zgod = sprZgodnoscWyrazow(bufor, wyraz_odn);
@@ -167,7 +168,7 @@ SWystapienieZgodnosci *analizujWyrazyZPliku(FILE *plik, char *wyraz_odn, char mo
             }
 
             // wielkość liter w porównywanych znakach ma znaczenie
-            if(mode == 1)
+            if(mode == '1')
             {
                 zgodnosc spr_zgod = sprZgodnoscWyrazow(bufor, wyraz_odn);
 
@@ -207,4 +208,5 @@ SWystapienieZgodnosci *analizujWyrazyZPliku(FILE *plik, char *wyraz_odn, char mo
         }
     }
     
+    return wyn;
 }

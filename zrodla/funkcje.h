@@ -33,11 +33,12 @@ zgodnosc sprZgodnoscWyrazow(char *wyraz_1, char *wyraz_2);
  * @param plik - przeszukiwany plik
  * @param wyraz_odn - wyraz odniesienia, czyli ciąg znaków, który jest poszukiwany w tekście
  * @param mode - sposób porównywania wyrazów:
- * \li 0 (domyślnie) - nie uwzględnia wielkości liter,
- * \li 1 - uwzględnia wielkość liter.
- * @return SWystapienieZgodnosci* listę wystąpień wyrazów zgodnych z wyrazem odniesienia
+ * \li '0' (domyślnie) - nie uwzględnia wielkości liter,
+ * \li '1' - uwzględnia wielkość liter.
+ * @return SWystapienieZgodnosci* listę wystąpień wyrazów zgodnych z wyrazem odniesienia. Konkretnie - ogon listy.
+ * W razie potrzeby początek listy musi zostać znaleziony oddzielnie.
  */
-SWystapienieZgodnosci *analizujWyrazyZPliku(FILE *plik, char *wyraz_odn, int mode = 0);
+SWystapienieZgodnosci *analizujWyrazyZPliku(FILE *plik, char *wyraz_odn, char mode);
 
 
 #endif // FUNKCJE_H

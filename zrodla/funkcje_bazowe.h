@@ -2,6 +2,8 @@
 #define FUNKCJE_BAZOWE_H
 
 #include <string.h>
+#include <ctype.h>
+#include <stdbool.h>
 
 #include "wlasne_typy_danych.h"
 
@@ -19,5 +21,7 @@ char *dekodujZgodnosc(zgodnosc arg);
  * @param lancuch - łańuch znaków do modyfikacji
  */
 void toLower(char *lancuch);
+
+
 
 #endif
