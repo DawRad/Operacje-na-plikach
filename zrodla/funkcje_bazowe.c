@@ -17,3 +17,15 @@ char *dekodujZgodnosc(zgodnosc arg)
         return "zgodnosc wyrazow nieokreslona";
     }
 }
+
+void toLower(char *lancuch)
+{
+    int i = 0;
+    while(*(lancuch + i) != 0)
+    {
+        if(*(lancuch + i) >= 'A' && *(lancuch + i) <= 'Z') *(lancuch + i) = *(lancuch + i) + ('a' - 'A');
+
+        ++i;
+    }
+}
+

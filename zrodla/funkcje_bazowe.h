@@ -13,4 +13,11 @@
  */
 char *dekodujZgodnosc(zgodnosc arg);
 
+/**
+ * @brief Zamienia wszystkie znaki liter w łańcuchu na litery małe.
+ * 
+ * @param lancuch - łańuch znaków do modyfikacji
+ */
+void toLower(char *lancuch);
+
 #endif

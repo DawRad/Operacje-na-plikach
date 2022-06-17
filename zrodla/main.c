@@ -46,23 +46,28 @@ int main(void)
     // printf("\nPodane wyrazy to (odpowiednio 1-szy i 2-gi): %s i %s", wyraz_1, wyraz_2);
     // printf("\nWynik testu zgodnosci: %s\n", dekodujZgodnosc(wynikSpr));
 
-    SWystapienieZgodnosci *glowa = NULL, *ogon = NULL;
+    // SWystapienieZgodnosci *glowa = NULL, *ogon = NULL;
 
-    dodKon(&glowa, &ogon, 77, niepelna);
-    dodPocz(&glowa, &ogon, 1, pelna);
-    dodPocz(&glowa, &ogon, 2, niepelna);
-    dodPocz(&glowa, &ogon, 12, pelna);
-    dodKon(&glowa, &ogon, 88, niepelna);
+    // dodKon(&glowa, &ogon, 77, niepelna);
+    // dodPocz(&glowa, &ogon, 1, pelna);
+    // dodPocz(&glowa, &ogon, 2, niepelna);
+    // dodPocz(&glowa, &ogon, 12, pelna);
+    // dodKon(&glowa, &ogon, 88, niepelna);
 
-    wypiszPocz(glowa);
-    wypiszKon(ogon);
+    // wypiszPocz(glowa);
+    // wypiszKon(ogon);
 
-    SWystapienieZgodnosci *temp = NULL;
-    temp = zwrocPojElemKon(ogon, 4);
+    // SWystapienieZgodnosci *temp = NULL;
+    // temp = zwrocPojElemKon(ogon, 4);
 
-    printf("\n\n4-ty element od początku listy:\nNumer linii: %d\nRodzaj zgodnosci: %s\n", temp->nrLinii, dekodujZgodnosc(temp->rodzZgodnosci));
+    // printf("\n\n4-ty element od początku listy:\nNumer linii: %d\nRodzaj zgodnosci: %s\n", temp->nrLinii, dekodujZgodnosc(temp->rodzZgodnosci));
 
-    wyczyscListePocz(glowa);
+    // wyczyscListePocz(glowa);
+
+    char wyraz[] = "PogodaDlaBogaczy";
+    printf("\nWczytany wyraz: %s", wyraz);
+    toLower(wyraz);
+    printf("\nWyraz po modyfikacji: %s\n", wyraz);
 
     // fclose(plikWej);
 
