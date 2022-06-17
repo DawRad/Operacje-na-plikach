@@ -71,21 +71,3 @@ zgodnosc sprZgodnoscWyrazow(char *wyraz_1, char *wyraz_2)
         return zerowa;
     }
 }
-
-char *dekodujZgodnosc(zgodnosc arg)
-{
-    switch(arg)
-    {
-        case zerowa:
-        return "wyrazy nie sa zgodne";
-
-        case pelna:
-        return "wyrazy sa w pelni zgodne";
-
-        case niepelna:
-        return "wyrazy sa czesciowo zgodne";
-
-        default:
-        return "zgodnosc wyrazow nieokreslona";
-    }
-}

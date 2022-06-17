@@ -1,3 +1,5 @@
+#include <conio.h>
+
 #include "funkcje.h"
 
 int maxBuffLngth = 50;
@@ -32,15 +34,35 @@ int main(void)
     //     printf("\n---%s---\n", wyraz);        
     // }
 
-    char wyraz_1[] = "wodolot";
-    char wyraz_2[] = "wodorower";
+    // char wyraz_1[50];
+    // char wyraz_2[50];
 
-    zgodnosc wynikSpr = sprZgodnoscWyrazow(wyraz_1, wyraz_2);
-    printf("Podane wyrazy to (odpowiednio 1-szy i 2-gi): %s i %s", wyraz_1, wyraz_2);
-    printf("\nWynik testu zgodnosci: %s", dekodujZgodnosc(wynikSpr));
+    // printf("Podaj pierwszy wyraz: ");    
+    // scanf("%s", wyraz_1);    
+    // printf("\nPodaj drugi wyraz: ");
+    // scanf("%s", wyraz_2);
 
+    // zgodnosc wynikSpr = sprZgodnoscWyrazow(wyraz_1, wyraz_2);
+    // printf("\nPodane wyrazy to (odpowiednio 1-szy i 2-gi): %s i %s", wyraz_1, wyraz_2);
+    // printf("\nWynik testu zgodnosci: %s\n", dekodujZgodnosc(wynikSpr));
+
+    SWystapienieZgodnosci *glowa = NULL, *ogon = NULL;
+
+    dodKon(&glowa, &ogon, 77, niepelna);
+    dodPocz(&glowa, &ogon, 1, pelna);
+    dodPocz(&glowa, &ogon, 2, niepelna);
+    dodPocz(&glowa, &ogon, 12, pelna);
+    dodKon(&glowa, &ogon, 88, niepelna);
+
+    wypiszPocz(glowa);
+    wypiszKon(ogon);
+
+    wyczyscListePocz(glowa);
 
     // fclose(plikWej);
+
+    printf("\nNaci");
+    getch();
 
     return 0;
 }

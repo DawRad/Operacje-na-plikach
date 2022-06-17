@@ -1,7 +1,7 @@
 #ifndef FUNKCJE_H
 #define FUNKCJE_H
 
-#include "wlasne_typy_danych.h"
+#include "lista_SWystZgod_interfejs.h"
 
 /**
  * @brief Funkcja wyznacza rozmiar tablicy znaków z tekstem.
@@ -26,14 +26,6 @@ void wypiszWyrazyZPliku(FILE *plik_we);
  * @return enum zgodnosc 
  */
 zgodnosc sprZgodnoscWyrazow(char *wyraz_1, char *wyraz_2);
-
-/**
- * @brief Funkcja zamieniająca typ wyliczeniowy zgodnosc na napis.
- * 
- * @param arg - wartość zgodności
- * @return char* odpowiedni łańcuch znaków, będący informacją o zgodności
- */
-char *dekodujZgodnosc(zgodnosc arg);
 
 
 #endif // FUNKCJE_H

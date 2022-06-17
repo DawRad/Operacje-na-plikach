@@ -3,5 +3,10 @@
 		{
 			"path": ".."
 		}
-	]
+	],
+	"settings": {
+		"files.associations": {
+			"lista_swystzgod_interfejs.h": "c"
+		}
+	}
 }

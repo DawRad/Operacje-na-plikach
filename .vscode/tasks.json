@@ -10,7 +10,9 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "${fileDirname}\\funkcje.c"
+                "${fileDirname}\\funkcje.c",
+                "${fileDirname}\\lista_SWystZgod_interfejs.c",
+                "${fileDirname}\\funkcje_bazowe.c"
             ],
             "options": {
                 "cwd": "${fileDirname}"
