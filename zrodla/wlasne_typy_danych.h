@@ -8,7 +8,8 @@ typedef enum zgodnosc
 {
     zerowa = 0,
     pelna = 1, 
-    niepelna = 2   
+    niepelna = 2,
+    dowolna = 3
 } zgodnosc;
 
 /**

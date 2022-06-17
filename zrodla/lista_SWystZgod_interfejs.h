@@ -44,6 +44,58 @@ void wypiszPocz(SWystapienieZgodnosci *glowa);
 void wypiszKon(SWystapienieZgodnosci *ogon);
 
 /**
+ * @brief Zwraca n-ty element względem początku listy.
+ * 
+ * Numerowanie elementów zaczyna się od n == 0. Jeśli podany numer elementu 
+ * wykracza poza liczbę elementów w liście, to zwraca koniec listy. Jeśli lista pusta - 
+ * zwraca NULL.
+ * @param glowa - wskaźnik pierwszego elementu listy
+ * @param licz - numer elementu, który ma zostać zwrócony
+ * @return SWystapienieZgodnosci* wskaźnik do szukanego elementu
+ */
+SWystapienieZgodnosci *zwrocPojElemPocz(SWystapienieZgodnosci *glowa, int licz);
+
+/**
+ * @brief Zwraca n-ty element względem końca listy.
+ * 
+ * Numerowanie elementów zaczyna się od n == 0. Jeśli podany numer elementu 
+ * wykracza poza liczbę elementów w liście, to zwraca początek listy. Jeśli lista pusta - 
+ * zwraca NULL.
+ * @param ogon - wskaźnik ostatniego elementu listy
+ * @param licz - numer elementu, który ma zostać zwrócony
+ * @return SWystapienieZgodnosci* wskaźnik do szukanego elementu
+ */
+SWystapienieZgodnosci *zwrocPojElemKon(SWystapienieZgodnosci *ogon, int licz);
+
+/**
+ * @brief Znajduje podzbiór elementów spełniających podane kryteria.
+ * 
+ * Lista jest przeszukiwana od początku. 
+ * @param glowa - wskaźnik pierwszego elementu listy
+ * @param nr_linii - numer linii danego elementu
+ * \li jeśli równy -1, to brana jest dowolna wartość
+ * @param param_zgod - rodzaj zgodności elementu
+ * \li jeśli równy "dowolna", to brana jest dowolna wartość
+ * @return SWystapienieZgodnosci* początek listy znalezionych elementów. Zwraca element równy NULL, jeśli
+ * nie zostały znalezione żadne elementy spełniające podane kryteria.
+ */
+SWystapienieZgodnosci *zwrocElemWgParamPocz(SWystapienieZgodnosci *glowa, int nr_linii, zgodnosc param_zgod);
+
+/**
+ * @brief Znajduje podzbiór elementów spełniających podane kryteria.
+ * 
+ * Lista jest przeszukiwana od końca. 
+ * @param ogon - wskaźnik ostatniego elementu listy
+ * @param nr_linii - numer linii danego elementu
+ * \li jeśli równy -1, to brana jest dowolna wartość
+ * @param param_zgod - rodzaj zgodności elementu
+ * \li jeśli równy "dowolna", to brana jest dowolna wartość
+ * @return SWystapienieZgodnosci* początek listy znalezionych elementów. Zwraca element równy NULL, jeśli
+ * nie zostały znalezione żadne elementy spełniające podane kryteria.
+ */
+SWystapienieZgodnosci *zwrocElemWgParamKon(SWystapienieZgodnosci *ogon, int nr_linii, zgodnosc param_zgod);
+
+/**
  * @brief Zwalnia pamięć zaalokowaną dla elementów listy.
  * 
  * @param glowa - wskaźnik pierwszego elementu listy

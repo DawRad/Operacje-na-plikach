@@ -57,6 +57,11 @@ int main(void)
     wypiszPocz(glowa);
     wypiszKon(ogon);
 
+    SWystapienieZgodnosci *temp = NULL;
+    temp = zwrocPojElemKon(ogon, 4);
+
+    printf("\n\n4-ty element od początku listy:\nNumer linii: %d\nRodzaj zgodnosci: %s\n", temp->nrLinii, dekodujZgodnosc(temp->rodzZgodnosci));
+
     wyczyscListePocz(glowa);
 
     // fclose(plikWej);
