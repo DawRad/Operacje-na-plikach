@@ -2,6 +2,11 @@
 Projekt zawierający działania na plikach w języku C. Wczytuje podany plik i analizuje tekst z pliku pod kątem znalezienia wyrazów podobnych do 
 wyrazu podanego jako odniesienie.
 
+## Środowisko tworzenia
+<p align="justify">
+Projekt został przygotowany w środowisku Visual Studio Code. Repozytorium zawiera również jego pliki konfiguracyjne.
+</p>
+
 ## Główne funkcje
 <p align="justify">
 Program pobiera wyrazy z pliku znak po znaku. Są one zapisywane do odpowiednio długiego bufora - tablicy znaków. Potem każdy wyraz jest sprawdzany pod 
@@ -17,5 +22,6 @@ w której wystąpiła zgodność z wyrazem odniesienia oraz o rodzaju zgodności
 
 Drugim jest typ wyliczeniowy określający stany zgodności wyrazów. Oba typy są zdefiniowane w pliku nagłówkowym "wlasne_typy_danych.h". 
   
-Ponadto, w pliku 
+Ponadto, w plikach "lista_SWystZgod_interfejs.h" i "lista_SWystZgod_interfejs.c" są zawarte odpowiednio deklaracje i definicje funkcji zarządzających listą
+_SWystapienieZgodnosci_, m. in.: tworzenie listy, zwalnianie zaalokowanej pamięci dla elementów listy, poruszanie się po liście, wypisywanie listy w konsoli. 
 </p>
