@@ -15,5 +15,7 @@ w pliku. Zgodność jest określana wg 3-stopniowej skali: pełna, niepełna lub
 Na potrzeby projektu utworzono dwa nowe typy danych. Pierwszym jest struktura rekurencyjna elementu listy dwukierunkowej, przechowującego dane o linii, 
 w której wystąpiła zgodność z wyrazem odniesienia oraz o rodzaju zgodności. 
 
-Drugim jest typ wyliczeniowy określający stany zgodności wyrazów.
+Drugim jest typ wyliczeniowy określający stany zgodności wyrazów. Oba typy są zdefiniowane w pliku nagłówkowym "wlasne_typy_danych.h". 
+  
+Ponadto, w pliku 
 </p>
